@@ -17,12 +17,12 @@ class EdgeConnectivity {
 
   /// Initialize the EdgeConnectivity package
   static void init({EdgeConnectivityConfig? config}) {
-    final _finalConfig = config ?? const EdgeConnectivityConfig();
+    final finalConfig = config ?? const EdgeConnectivityConfig();
 
     if (!Get.isRegistered<EdgeConnectivityController>()) {
       _controller = Get.put(
         EdgeConnectivityController(
-          config: _finalConfig,
+          config: finalConfig,
           statusStream: _statusController,
         ),
       );

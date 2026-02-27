@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../config/edge_connectivity_config.dart';
 import 'default_offline_widget.dart';
 
@@ -33,10 +32,6 @@ class OverlayManager {
       }
 
       final overlayState = Overlay.of(overlayContext);
-      if (overlayState == null) {
-        debugPrint('[OverlayManager] Overlay.of returned null. Ensure MaterialApp or Navigator exists.');
-        return;
-      }
 
       _overlayEntry = OverlayEntry(
         builder: (_) {
